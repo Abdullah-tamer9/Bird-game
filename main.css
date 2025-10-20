@@ -1,0 +1,76 @@
+:root {
+    --mainbackcolor: #171427;
+    --mainwall: gray;
+    --birdscolor: yellow;
+}
+
+#game {
+    width: 500px;
+    height: 500px;
+    background-color: var(--mainbackcolor);
+    margin: auto;
+    border: solid 2px var(--mainwall);
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+#yourscore {
+    width: 500px;
+    height: 100px;
+    background-color: var(--mainbackcolor);
+    margin: auto;
+    margin-top: 50px;
+    color: white;
+    text-align: left;
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#wall {
+    width: 100px;
+    height: 500px;
+    background-color: var(--mainwall);
+    position: absolute;
+    left: 100%;
+    z-index: 1;
+    animation: gamranimation 2s infinite linear;
+}
+
+#hole {
+    width: 100px;
+    height: 150px;
+    background-color: var(--mainbackcolor);
+    position: absolute;
+    top: 200px;
+    left: 100%;
+    z-index: 2;
+    animation: gamranimation 2s infinite linear;
+}
+
+#bird {
+    width: 25px;
+    height: 25px;
+    background-color: var(--birdscolor);
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    z-index: 3;
+}
+
+@keyframes gamranimation {
+    0% {
+        left: 100%;
+    }
+
+
+    100% {
+        left: -60px;
+    }
+}
